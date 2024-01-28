@@ -8,10 +8,11 @@ metadata:
   name: kube-state-metrics
   namespace: kube-system
 spec:
-  clusterIP: None
+  type: NodePort
   ports:
   - name: http-metrics
     port: 8080
+    nodePort: 30080
     targetPort: http-metrics
   - name: telemetry
     port: 8081
